@@ -1,4 +1,4 @@
-# @luubui/ui-theme
+# @duyluu/ui-theme
 
 A comprehensive, type-safe theme system for React Native applications. Extracted from the Fonos mobile app for reusability across multiple projects.
 
@@ -16,9 +16,9 @@ A comprehensive, type-safe theme system for React Native applications. Extracted
 ## 📦 Installation
 
 ```bash
-npm install @luubui/ui-theme
+npm install @duyluu/ui-theme
 # or
-yarn add @luubui/ui-theme
+yarn add @duyluu/ui-theme
 ```
 
 ## 🎯 Quick Start
@@ -26,7 +26,7 @@ yarn add @luubui/ui-theme
 ### Basic Usage
 
 ```tsx
-import { useTheme, useThemeColors, useThemeSelect } from '@luubui/ui-theme';
+import { useTheme, useThemeColors, useThemeSelect } from '@duyluu/ui-theme';
 
 const MyComponent = () => {
   const theme = useTheme();
@@ -51,7 +51,7 @@ const MyComponent = () => {
 ### Style Creation
 
 ```tsx
-import { useThemeStyles } from '@luubui/ui-theme';
+import { useThemeStyles } from '@duyluu/ui-theme';
 
 const MyComponent = () => {
   const styles = useThemeStyles((theme) => ({
@@ -297,7 +297,7 @@ interface ShadowSystem {
 ### Custom Theme Creation
 
 ```tsx
-import { createLightTheme, createDarkTheme } from '@luubui/ui-theme';
+import { createLightTheme, createDarkTheme } from '@duyluu/ui-theme';
 
 // Custom light theme
 const myLightTheme = createLightTheme({
@@ -326,7 +326,7 @@ const myDarkTheme = createDarkTheme({
 ### Theme Service Setup
 
 ```tsx
-import { createThemeService } from '@luubui/ui-theme';
+import { createThemeService } from '@duyluu/ui-theme';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const themeService = createThemeService({
@@ -356,7 +356,7 @@ import { useTheme } from 'Components/Theme';
 import { Theme } from 'Components/Theme/constants';
 
 // After  
-import { useTheme, getCurrentTheme } from '@luubui/ui-theme';
+import { useTheme, getCurrentTheme } from '@duyluu/ui-theme';
 ```
 
 #### 2. Update Hook Usage
@@ -394,7 +394,7 @@ const styles = useThemeStyles((theme) => ({
 import { ThemeProvider } from 'Components/Theme';
 
 // After
-import { SystemSchemeListener } from '@luubui/ui-theme';
+import { SystemSchemeListener } from '@duyluu/ui-theme';
 
 // Wrap your app
 <SystemSchemeListener>
@@ -456,7 +456,7 @@ If you encounter TypeScript errors:
 
 1. **Ensure proper imports**:
    ```tsx
-   import type { Theme, ColorPalette } from '@luubui/ui-theme';
+   import type { Theme, ColorPalette } from '@duyluu/ui-theme';
    ```
 
 2. **Check theme selection types**:

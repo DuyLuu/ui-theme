@@ -1,14 +1,14 @@
 # Migration Guide
 
-This guide helps you migrate from existing theme systems to `@luubui/ui-theme`.
+This guide helps you migrate from existing theme systems to `@duyluu/ui-theme`.
 
 ## 🎯 Overview
 
-The `@luubui/ui-theme` package provides a modern, type-safe theme system that can replace most existing theme implementations. This guide covers common migration scenarios.
+The `@duyluu/ui-theme` package provides a modern, type-safe theme system that can replace most existing theme implementations. This guide covers common migration scenarios.
 
 ## 📋 Migration Checklist
 
-- [ ] Install `@luubui/ui-theme` package
+- [ ] Install `@duyluu/ui-theme` package
 - [ ] Update theme imports across your codebase
 - [ ] Replace theme provider setup
 - [ ] Update hook usage patterns
@@ -22,9 +22,9 @@ The `@luubui/ui-theme` package provides a modern, type-safe theme system that ca
 ### Step 1: Install Package
 
 ```bash
-npm install @luubui/ui-theme
+npm install @duyluu/ui-theme
 # or
-yarn add @luubui/ui-theme
+yarn add @duyluu/ui-theme
 ```
 
 ### Step 2: Update Imports
@@ -42,7 +42,7 @@ import {
   useTheme, 
   useThemeSelect, 
   getCurrentTheme 
-} from '@luubui/ui-theme';
+} from '@duyluu/ui-theme';
 ```
 
 ### Step 3: Update Hook Usage
@@ -74,7 +74,7 @@ function App() {
 }
 
 // After
-import { SystemSchemeListener } from '@luubui/ui-theme';
+import { SystemSchemeListener } from '@duyluu/ui-theme';
 
 function App() {
   return (
@@ -102,7 +102,7 @@ export const useTheme = () => {
 };
 
 // After - Use package hooks
-import { useTheme } from '@luubui/ui-theme';
+import { useTheme } from '@duyluu/ui-theme';
 // No context setup needed, works out of the box
 ```
 
@@ -120,7 +120,7 @@ const Container = styled.View`
 `;
 
 // After - Theme hooks with StyleSheet
-import { useThemeStyles } from '@luubui/ui-theme';
+import { useThemeStyles } from '@duyluu/ui-theme';
 
 const MyComponent = () => {
   const styles = useThemeStyles((theme) => ({
@@ -152,8 +152,8 @@ const MyComponent = () => {
   );
 };
 
-// After - @luubui/ui-theme
-import { useThemeColors } from '@luubui/ui-theme';
+// After - @duyluu/ui-theme
+import { useThemeColors } from '@duyluu/ui-theme';
 
 const MyComponent = () => {
   const colors = useThemeColors();
@@ -180,8 +180,8 @@ const MyComponent = () => {
   return <View style={{ backgroundColor: bgColor }} />;
 };
 
-// After - @luubui/ui-theme
-import { useThemeSelect } from '@luubui/ui-theme';
+// After - @duyluu/ui-theme
+import { useThemeSelect } from '@duyluu/ui-theme';
 
 const MyComponent = () => {
   const bgColor = useThemeSelect({
@@ -209,7 +209,7 @@ const colors = {
 };
 
 // After - Theme configuration
-import { createLightTheme } from '@luubui/ui-theme';
+import { createLightTheme } from '@duyluu/ui-theme';
 
 const customTheme = createLightTheme({
   colors: {
@@ -260,7 +260,7 @@ const spacing = {
 };
 
 // After - Use existing spacing or customize
-import { createLightTheme } from '@luubui/ui-theme';
+import { createLightTheme } from '@duyluu/ui-theme';
 
 // Option 1: Use existing spacing (recommended)
 const theme = useTheme();
@@ -286,7 +286,7 @@ const themeStore = createStore({
 });
 
 // After - Use theme service
-import { createThemeService } from '@luubui/ui-theme';
+import { createThemeService } from '@duyluu/ui-theme';
 
 const themeService = createThemeService({
   persistKey: 'app-theme',

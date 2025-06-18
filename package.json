@@ -1,5 +1,5 @@
 {
-  "name": "@luubui/ui-theme",
+  "name": "@duyluu/ui-theme",
   "version": "1.0.0",
   "description": "Standalone theme system for React Native applications",
   "main": "dist/index.js",

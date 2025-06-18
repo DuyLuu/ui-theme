@@ -1,6 +1,6 @@
 # Usage Examples
 
-This document provides comprehensive examples of how to use `@luubui/ui-theme` in different scenarios.
+This document provides comprehensive examples of how to use `@duyluu/ui-theme` in different scenarios.
 
 ## 🚀 Basic Usage
 
@@ -9,7 +9,7 @@ This document provides comprehensive examples of how to use `@luubui/ui-theme` i
 ```tsx
 import React from 'react';
 import { View, Text } from 'react-native';
-import { useTheme, useThemeColors } from '@luubui/ui-theme';
+import { useTheme, useThemeColors } from '@duyluu/ui-theme';
 
 const WelcomeCard = () => {
   const theme = useTheme();
@@ -47,7 +47,7 @@ const WelcomeCard = () => {
 ```tsx
 import React from 'react';
 import { TouchableOpacity, Text } from 'react-native';
-import { useThemeStyles, useThemeSelect } from '@luubui/ui-theme';
+import { useThemeStyles, useThemeSelect } from '@duyluu/ui-theme';
 
 interface ThemedButtonProps {
   title: string;
@@ -119,7 +119,7 @@ const ThemedButton: React.FC<ThemedButtonProps> = ({
 ```tsx
 import React from 'react';
 import { View, Text } from 'react-native';
-import { useThemeSelect, useThemeColors } from '@luubui/ui-theme';
+import { useThemeSelect, useThemeColors } from '@duyluu/ui-theme';
 
 const StatusCard = ({ status }: { status: 'online' | 'offline' | 'away' }) => {
   const colors = useThemeColors();
@@ -172,7 +172,7 @@ const StatusCard = ({ status }: { status: 'online' | 'offline' | 'away' }) => {
 ```tsx
 import React from 'react';
 import { View } from 'react-native';
-import { useThemeSelect } from '@luubui/ui-theme';
+import { useThemeSelect } from '@duyluu/ui-theme';
 
 const AdaptiveLayout = ({ children }: { children: React.ReactNode }) => {
   // Complex selection based on theme and other factors
@@ -223,8 +223,8 @@ const AdaptiveLayout = ({ children }: { children: React.ReactNode }) => {
 ```tsx
 import React from 'react';
 import { View, Text, Switch, ScrollView } from 'react-native';
-import { useThemeStyles, useThemeMode, getCurrentThemeMode } from '@luubui/ui-theme';
-import { createThemeService } from '@luubui/ui-theme';
+import { useThemeStyles, useThemeMode, getCurrentThemeMode } from '@duyluu/ui-theme';
+import { createThemeService } from '@duyluu/ui-theme';
 
 const themeService = createThemeService({
   persistKey: 'app-theme',
@@ -326,7 +326,7 @@ const SettingsScreen = () => {
 ```tsx
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { useThemeStyles, useThemeSelect } from '@luubui/ui-theme';
+import { useThemeStyles, useThemeSelect } from '@duyluu/ui-theme';
 
 interface Product {
   id: string;
@@ -416,7 +416,7 @@ const ProductCard: React.FC<{ product: Product; onPress: () => void }> = ({
 ### Brand Theme Example
 
 ```tsx
-import { createLightTheme, createDarkTheme } from '@luubui/ui-theme';
+import { createLightTheme, createDarkTheme } from '@duyluu/ui-theme';
 
 // Custom brand colors
 const brandColors = {
@@ -477,7 +477,7 @@ export const customDarkTheme = createDarkTheme({
 
 ```tsx
 import React from 'react';
-import { createThemeService } from '@luubui/ui-theme';
+import { createThemeService } from '@duyluu/ui-theme';
 import { customLightTheme, customDarkTheme } from './customThemes';
 
 // Create theme service with custom themes
@@ -509,7 +509,7 @@ const App = () => {
 ```tsx
 import React, { memo } from 'react';
 import { View, Text } from 'react-native';
-import { useThemeColors, useThemeSelect } from '@luubui/ui-theme';
+import { useThemeColors, useThemeSelect } from '@duyluu/ui-theme';
 
 // Memoized component that only re-renders when props change
 const OptimizedCard = memo<{ title: string; subtitle: string }>(({ title, subtitle }) => {
@@ -566,7 +566,7 @@ const OptimizedCard = memo<{ title: string; subtitle: string }>(({ title, subtit
 ### Custom Hook for Repeated Patterns
 
 ```tsx
-import { useThemeStyles } from '@luubui/ui-theme';
+import { useThemeStyles } from '@duyluu/ui-theme';
 
 // Custom hook for card styles
 const useCardStyles = () => {
@@ -616,12 +616,12 @@ const InfoCard = ({ title, content }: { title: string; content: string }) => {
 ```tsx
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import { createLightTheme, createDarkTheme } from '@luubui/ui-theme';
+import { createLightTheme, createDarkTheme } from '@duyluu/ui-theme';
 import { MyThemedComponent } from './MyThemedComponent';
 
 // Mock theme service for testing
-jest.mock('@luubui/ui-theme', () => ({
-  ...jest.requireActual('@luubui/ui-theme'),
+jest.mock('@duyluu/ui-theme', () => ({
+  ...jest.requireActual('@duyluu/ui-theme'),
   useTheme: () => createLightTheme(),
   useThemeColors: () => createLightTheme().colors,
   useThemeMode: () => 'light',
@@ -635,8 +635,8 @@ describe('MyThemedComponent', () => {
   
   it('renders with dark theme', () => {
     // Mock dark theme
-    jest.doMock('@luubui/ui-theme', () => ({
-      ...jest.requireActual('@luubui/ui-theme'),
+    jest.doMock('@duyluu/ui-theme', () => ({
+      ...jest.requireActual('@duyluu/ui-theme'),
       useTheme: () => createDarkTheme(),
       useThemeColors: () => createDarkTheme().colors,
       useThemeMode: () => 'dark',
@@ -648,4 +648,4 @@ describe('MyThemedComponent', () => {
 });
 ```
 
-This comprehensive example collection should help you understand how to effectively use `@luubui/ui-theme` in real-world scenarios! 🎉 
+This comprehensive example collection should help you understand how to effectively use `@duyluu/ui-theme` in real-world scenarios! 🎉 
