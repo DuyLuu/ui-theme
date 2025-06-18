@@ -485,6 +485,5 @@ Contributions are welcome! Please read our contributing guidelines before submit
 
 ## 📞 Support
 
-- 📧 Email: support@luubui.dev
-- 🐛 Issues: [GitHub Issues](https://github.com/luubui/ui-theme/issues)
-- 📖 Docs: [Full Documentation](https://ui-theme.luubui.dev) 
+- 📧 Email: duyluu.bui@gmail.com
+- 🐛 Issues: [GitHub Issues](https://github.com/DuyLuu/ui-theme/issues)
